@@ -1,4 +1,4 @@
-package springboot.webservice.taeyoon.web.domain.posts;
+package springboot.webservice.taeyoon.domain.posts;
 
 import org.junit.After;
 import org.junit.Test;
