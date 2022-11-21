@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import springboot.webservice.taeyoon.config.auth.LoginUser;
 import springboot.webservice.taeyoon.config.auth.dto.SessionUser;
 import springboot.webservice.taeyoon.service.posts.PostsService;
 import springboot.webservice.taeyoon.web.dto.PostsResponseDto;
@@ -18,10 +19,8 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
-
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
 
         if (user != null) {
             model.addAttribute("userName", user.getName());
