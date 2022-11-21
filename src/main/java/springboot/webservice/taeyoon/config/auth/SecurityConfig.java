@@ -8,7 +8,7 @@ import springboot.webservice.taeyoon.domain.user.Role;
 
 
 @RequiredArgsConstructor
-@EnableWebSecurity
+@EnableWebSecurity // 스프링 security 설정 활성화
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final CustomOAuth2UserService customOAuth2UserService;
