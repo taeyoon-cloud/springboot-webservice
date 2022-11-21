@@ -30,6 +30,7 @@ dependencies {
     // Gradle 7버전 이후로
     // compile, runtime, testCompile, testRuntime ->
     // implementation, runtimeOnly, testImplementation, testRuntimeOnly로 대체됨
+    // 현재 7.4 버전 사용중
 
     implementation('org.springframework.boot:spring-boot-starter-web')
     testImplementation('org.springframework.boot:spring-boot-starter-test')

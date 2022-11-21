@@ -21,7 +21,7 @@ public class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
 
-    @After
+    @After // junit5의 @AfterEach와 같음
     public void cleanup() {
         postsRepository.deleteAll();
     }
